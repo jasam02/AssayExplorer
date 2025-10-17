@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    background-color: #333;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 16px;
+    padding-block: 8px;
+    color: #ddd;
+
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    > a {
+            color: #ddd;
+            font-size: large;
+            text-decoration: none;
+    }
+
+    > h2 {
+        cursor: pointer;
+    }
+}
