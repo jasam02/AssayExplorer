@@ -6,3 +6,15 @@
     <router-outlet/>
   </main>
 </section>
+
+@if (modal.selectedAssay()) {
+<div class="modal-backdrop" (click)="modal.close()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <button class="close" (click)="modal.close()">×</button>
+    <h2>{{ modal.selectedAssay()?.name }}</h2>
+    <p><strong>Type:</strong> {{ modal.selectedAssay()?.type }}</p>
+    <p><strong>Description:</strong> {{ modal.selectedAssay()?.description }}</p>
+    <p><strong>Created:</strong> {{ modal.selectedAssay()?.created_at | date:'medium' }}</p>
+  </div>
+</div>
+}

@@ -1,1 +1,11 @@
-<p>dashboard works!</p>
+@if (assays().length > 0) {
+    <div>
+        @for (a of assays(); track a.id) {
+            <div class="clickableCard" (click)="openAssay(a)">
+                <app-assay-card [assay]="a"/>
+            </div>
+        }
+    </div>
+} @else {
+    <h2>No assays found.</h2>
+}

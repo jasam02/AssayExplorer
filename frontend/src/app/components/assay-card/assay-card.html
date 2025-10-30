@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="content">
+    <h3>{{assay().name}}</h3>
+
+
+    <p>Type: <strong>{{assay().type}}</strong></p>
+
+    
+    <div class="desc">
+        <p class="descText">Description</p>
+        <p>{{assay().description}}</p>
+    </div>
+    </div>
+    
+    <p class="date">Created: {{assay().created_at | date:'short'}}</p>
+</div>
